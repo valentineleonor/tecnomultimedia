@@ -1,4 +1,4 @@
-int actualPantalla = 3;
+int actualPantalla = 0;
 int cant = 24;
 PImage  [] pantallas = new PImage[cant];
 String [] textos;
