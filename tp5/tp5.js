@@ -1,9 +1,5 @@
+// https://youtu.be/CrCBJOTZD_A
 let   objJuego, objContador;
-
-
-
-
-
 
 function setup() {
   createCanvas(500, 500);
