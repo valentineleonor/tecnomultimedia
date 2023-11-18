@@ -1,0 +1,12 @@
+FROGGER
+CREDITOS
+INSTRUCCIONES
+¡PERDISTE!
+pulsa esc para volver
+¡GANASTE!
+Ayuda a la rana a cruzar la calle! el objetivo es llevar a la rana de un lado de la pantalla al otro, cruzando una serie de obstáculos: autos movimiento, hasta llegar a la parte superior de la pantalla, donde la rana estara a salvo y ganaras el juego completando el nivel.
+Controles: Utiliza las Flechas direccionales: arriba, abajo, izquierda y derecha para mover la rana en esas direcciones.
+Reglas y consejos: Debes evitar ser atropellado por los autos que se desplazan horizontalmente en la carretera, El juego tiene un límite de tiempo de 20 SEGUNDOS, debes cruzar la carretera antes de que este se agote.
+MENÚ
+Valentina Cuatrini
+presiona ESC para volver al menú
