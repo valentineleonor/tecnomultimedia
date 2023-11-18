@@ -1,3 +1,4 @@
+// https://youtu.be/4UXk9aeBjKI   LINK VIDEO YOUTUBE 
 let c =13;
 let imagenes=[], texto= [];
 let estado;
