@@ -1,37 +1,17 @@
-let p = []; // arreglo de imagenes
-let texto = [];
-let aventura, objJuego, objContador;
+let aventur;
 
 function setup() {
-  createCanvas(500, 500);
-  aventura = new Aventura();
-  objJuego = new Juego();
-  objContador = new Contador();
+createCanvas(500, 500);
+aventur = new Aventura();
 }
+
 
 function draw() {
-  aventura.dibujar();
- // objJuego.dibujar();
- // objContador.dibujar();
-  //objContador.incrementarTiempo();
-  //objContador.llegoLimite();
+aventur.dibujar();
 }
+
 
 function mousePressed() {
-  aventura.click();
+  aventur.click();
   //objJuego.click();
-}
-
-function keyPressed() {
-  aventura.pasaje();
-}
-
-function preload() {
-  for (let i = 0; i < 26; i++) {
-    p[i] = loadImage('data/p' + i + '.png');
-  }
-
-  for (let x = 0; x < 18; x++) {
-    texto = loadStrings('data/texto.txt');
-  }
-}
+} 
