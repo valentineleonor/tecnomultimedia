@@ -6,6 +6,7 @@ class PantallaDosBotones {
 
   dibujar() {
     image(p[27], 0, 0);
+   
     this.boton1.dibujar();
     this.boton2.dibujar();
   }

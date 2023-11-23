@@ -11,15 +11,15 @@ function setup() {
 
 function draw() {
   aventura.dibujar();
-  objJuego.dibujar();
-  objContador.dibujar();
-  objContador.incrementarTiempo();
-  objContador.llegoLimite();
+ // objJuego.dibujar();
+ // objContador.dibujar();
+  //objContador.incrementarTiempo();
+  //objContador.llegoLimite();
 }
 
 function mousePressed() {
   aventura.click();
-  objJuego.click();
+  //objJuego.click();
 }
 
 function keyPressed() {
