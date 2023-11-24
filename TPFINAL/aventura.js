@@ -67,14 +67,7 @@ class Aventura {
                   }
   }
 
-  /*distanciaS(x_, y_) {
-   
-   if (dist(250, 440, this.x_, this.y_) < 70) {
-   return true;
-   } else {
-   return false;
-   }
-   }*/
+  
   distanciaS(x_, y_) {
     return dist(250, 440, this.x_, this.y_) < 70;
   }
