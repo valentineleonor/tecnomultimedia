@@ -16,7 +16,7 @@ class Aventura {
   dibujar() {
 
 
-    if (this.estado == 1) { //INICIO
+   if (this.estado == 1) { //INICIO
       image(this.ve[1], 0, 0, 500, 500);
     } else
       if (this.estado == 2) {
@@ -44,6 +44,12 @@ class Aventura {
                 // Verificar la pérdida del jugador
                 if (this.objJuego.verificarPerdida()) {
                   this.estado = 9; // Cambiar al estado correspondiente a la pérdida
+
+
+                  // Verificar la victoria del jugador
+                  if (this.objJuego.verificarGanar()) {
+                    this.estado = 8; // Cambiar al estado correspondiente a la victoria
+                  }
                 }
               } else //
               if (this.estado == 8) {
@@ -60,33 +66,34 @@ class Aventura {
                     image(this.ve[16], 380, 400, 90, 90);//BOTON A
                   }
   }
-}
 
-distanciaS(x_, y_) {
-
-  if (dist(250, 440, this.x_, this.y_) < 70) {
-    return true;
-  } else {
-    return false;
+  /*distanciaS(x_, y_) {
+   
+   if (dist(250, 440, this.x_, this.y_) < 70) {
+   return true;
+   } else {
+   return false;
+   }
+   }*/
+  distanciaS(x_, y_) {
+    return dist(250, 440, this.x_, this.y_) < 70;
   }
-}
 
 
 
+  click() {
 
-click() {
-
-  if (this.estado == 1) {
-    this.estado = 2;
-  } else
-    if ((this.estado == 2)&&(dist(250, 440, mouseX, mouseY) < 30)) {
-      this.estado = 3;
+    if (this.estado == 1) {
+      this.estado = 2;
     } else
-      if (this.estado == 3) {
-        if (dist(50, 440, mouseX, mouseY) < 30) {
+      if ((this.estado == 2)&&(dist(250, 440, mouseX, mouseY) < 30)) {
+        this.estado = 3;
+      } else
+        if (this.estado == 3) {
+          if (dist(50, 440, mouseX, mouseY) < 30) {
 
-          this.estado = 30;
+            this.estado = 30;
+          }
         }
-      }
-}
+  }
 }

@@ -12,6 +12,7 @@ class juego {
     this.objPolicia = new Policia();
     this.objCamara = new Camara();
     //this.objPantallas = new Pantallas();
+    this.ganar=false;
   }
 
   dibujar() {
@@ -44,9 +45,28 @@ class juego {
 
     //Verificar si el personaje llegó a la zona superior sin perder vidas
     if (this.objPersonaje.vidas() > 0 && this.objPersonaje.getPosY() <= 0) {
-      //this.objPantallas.activarGanar();
+      // Verificar la pérdida del jugador
+      if (this.verificarPerdida()) {
+        // Cambiar al estado correspondiente a la pérdida
+        this.estado = 9;
+      } else {
+        // Verificar si el jugador ha ganado
+        if (this.verificarGanado()) {
+          // Cambiar al estado correspondiente a la victoria (imagen 8)
+          this.estado = 8;
+        }
+      }
     }
   }
+
+  verificarGanar() {
+    // Verificar si el jugador ha ganado, por ejemplo, al llegar a la zona segura
+    if (this.objPersonaje.vidas() > 0 && this.objPersonaje.getPosY() <= 0) {
+      return true;
+    }
+    return false;
+  }
+
   verificarPerdida() {
     if (this.objPersonaje.vidas() === 0) {
       return true;

@@ -1,5 +1,6 @@
 let aventur;
-
+ 
+ 
 function setup() {
 createCanvas(500, 500);
 aventur = new Aventura();
