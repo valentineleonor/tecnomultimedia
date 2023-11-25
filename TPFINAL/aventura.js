@@ -39,9 +39,6 @@ class Aventura {
               if (this.estado == 6) {
                 image(this.ve[6], 0, 0, 500, 500);//IMAGEN
                 image(this.ve[17], 210, 400, 90, 90); //BOTON SIGUIENTE
-              } else if (this.estado ==13) {
-                image(this.ve[10], 0, 0, 500, 500);//IMAGEN
-                image(this.ve[17], 210, 400, 90, 90); //BOTON SIGUIENTE
               } else
                 if (this.estado == 30) { //JUEGO
                   this.objJuego.dibujar();
@@ -66,15 +63,39 @@ class Aventura {
                   if (this.estado == 9) {
                     image(this.ve[7], 0, 0, 500, 500);//IMAGEN
                     image(this.ve[17], 210, 400, 90, 90); //BOTON SIGUIENTE
+                  } else if (this.estado ==10) {
+                    image(this.ve[12], 0, 0, 500, 500);
+                    image(this.ve[15], 30, 400, 90, 90);//BOTON B
+                    image(this.ve[16], 380, 400, 90, 90);//BOTON A
+                  } else if (this.estado ==10) {
+                    image(this.ve[12], 0, 0, 500, 500);//IMAGEN
+                    image(this.ve[17], 210, 400, 90, 90); //BOTON SIGUIENTE
                   } else
                     if (this.estado == 10) { // PANTALLA A Y B
                       image(this.ve[12], 0, 0, 500, 500);
                       image(this.ve[15], 30, 400, 90, 90);//BOTON B
                       image(this.ve[16], 380, 400, 90, 90);//BOTON A
-                    }
+                    } else
+                      if (this.estado == 11) {
+                        image(this.ve[9], 0, 0, 500, 500);//IMAGEN
+                        image(this.ve[18], 210, 400, 90, 90); //BOTON creditos
+                      } else if (this.estado ==12) {
+                        image(this.ve[13], 0, 0, 500, 500);//IMAGEN
+                        image(this.ve[18], 210, 400, 90, 90); //BOTON creditos
+                      } else if (this.estado ==13) {
+                        image(this.ve[10], 0, 0, 500, 500);//IMAGEN
+                        image(this.ve[17], 210, 400, 90, 90); //BOTON SIGUIENTE
+                      } else if (this.estado ==14) {
+                        image(this.ve[11], 0, 0, 500, 500);//IMAGEN
+                        image(this.ve[17], 210, 400, 90, 90); //BOTON SIGUIENTE
+                      } else if (this.estado ==14) {
+                        image(this.ve[10], 0, 0, 500, 500);//IMAGEN
+                        image(this.ve[17], 210, 400, 90, 90); //BOTON SIGUIENTE
+                      } else if (this.estado ==9) {
+                        image(this.ve[7], 0, 0, 500, 500);//IMAGEN
+                        image(this.ve[17], 210, 400, 90, 90); //BOTON SIGUIENTE
+                      }
   }
-
-
   distanciaS(x_, y_) {
     return dist(250, 440, this.x_, this.y_) < 70;
   }
@@ -95,9 +116,23 @@ class Aventura {
         this.estado = 13;
       }
     } else if (this.estado == 5) {
-      this.estado = 6; // Cambiar al estado siguiente
+      this.estado = 6; //
     } else if (this.estado == 6) {
+      this.estado = 30; //JUEGO
+
       this.estado = 30; // Cambiar al estado siguiente
+    } else if ((this.estado == 13) && (dist(250, 440, mouseX, mouseY) < 30)) {
+      this.estado = 14;
+    } else if ((this.estado == 14) && (dist(250, 440, mouseX, mouseY) < 30)) {
+      this.estado = 9;
+    } else if ((this.estado == 9 ) && (dist(250, 440, mouseX, mouseY) < 30)) {
+      this.estado = 10;
+    } else if (this.estado == 10) {
+      if (dist(50, 440, mouseX, mouseY) < 30) { //boton A
+        this.estado = 11;
+      } else if (dist(400, 440, mouseX, mouseY) < 30) { //boton B
+        this.estado = 12;
+      }
     }
   }
 }
